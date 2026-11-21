@@ -40,6 +40,14 @@
   ],
   "author": "Michał Worwag",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michal-worwag/string-similarity"
+  },
+  "bugs": {
+    "url": "https://github.com/michal-worwag/string-similarity/issues"
+  },
+  "homepage": "https://github.com/michal-worwag/string-similarity#readme",
   "publishConfig": {
     "access": "public"
   },
