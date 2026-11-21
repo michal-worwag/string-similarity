@@ -10,4 +10,4 @@ npx changeset
 
 ## Releasing
 
-On push to `main`, the Release workflow either opens a Version Packages PR or publishes to npm when that PR is merged.
+On push to `master`, the Release workflow either opens a Version Packages PR or publishes to npm when that PR is merged.
