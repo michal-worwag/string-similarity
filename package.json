@@ -1,0 +1,51 @@
+{
+  "name": "@michalwo/string-similarity",
+  "version": "0.1.0",
+  "description": "Finds degree of similarity between strings, based on Dice's Coefficient.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "keywords": [
+    "strings",
+    "similar",
+    "difference",
+    "similarity",
+    "compare",
+    "comparison",
+    "degree",
+    "match",
+    "matching",
+    "dice",
+    "typescript"
+  ],
+  "author": "Michał Worwag",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
+}
