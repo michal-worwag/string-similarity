@@ -20,7 +20,10 @@
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run typecheck && npm run build"
+    "test": "vitest run",
+    "ci": "npm run typecheck && npm run test && npm run build",
+    "release": "npm run build && changeset publish",
+    "prepublishOnly": "npm run ci"
   },
   "keywords": [
     "strings",
@@ -45,7 +48,9 @@
   },
   "sideEffects": false,
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^5.1.1"
   }
 }
