@@ -2,8 +2,6 @@
 
 Finds degree of similarity between strings, based on Dice's Coefficient.
 
-TypeScript rewrite of [`string-similarity`](https://www.npmjs.com/package/string-similarity).
-
 ## Install
 
 ```bash
@@ -13,11 +11,11 @@ npm install @michalwo/string-similarity
 ## Usage
 
 ```ts
-import { compareTwoStrings, findBestMatch } from "@michalwo/string-similarity";
+import { compareTwoStrings, findBestMatch } from '@michalwo/string-similarity';
 
-const similarity = compareTwoStrings("healed", "sealed");
+const similarity = compareTwoStrings('healed', 'sealed');
 
-const matches = findBestMatch("healed", ["edward", "sealed", "theatre"]);
+const matches = findBestMatch('healed', ['edward', 'sealed', 'theatre']);
 ```
 
 ## API
@@ -35,7 +33,10 @@ Returns:
 ```ts
 {
   ratings: Array<{ target: string; rating: number }>;
-  bestMatch: { target: string; rating: number };
+  bestMatch: {
+    target: string;
+    rating: number;
+  }
   bestMatchIndex: number;
 }
 ```
